@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "prdb-reading": {
+      "url": "https://prdb.ai/mcp",
+      "scopes": [
+        "documents:read",
+        "documents:upload",
+        "reader:read",
+        "annotations:write",
+        "notes:read",
+        "reviews:draft",
+        "notes:write",
+        "reviews:publish"
+      ]
+    }
+  }
+}

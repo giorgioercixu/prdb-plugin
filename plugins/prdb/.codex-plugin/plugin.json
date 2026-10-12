@@ -1,0 +1,37 @@
+{
+  "name": "prdb",
+  "version": "0.1.0",
+  "description": "Read your private papers with exact highlights, comments and review drafts in PRDB.",
+  "author": {
+    "name": "PRDB",
+    "url": "https://prdb.ai"
+  },
+  "homepage": "https://github.com/giorgioercixu/prdb-plugin#readme",
+  "repository": "https://github.com/giorgioercixu/prdb-plugin",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "PRDB",
+    "shortDescription": "Read papers with your agent",
+    "longDescription": "Search PRDB, read your private PDFs, save exact highlights and comments, and draft private reviews with checked sources. Connect your ordinary PRDB account through browser OAuth. Upload with PRDB's browser file selection or an optional local picker. Public reviews require your separate confirmation. Public trial: fresh-machine Codex Desktop feedback is welcome; generic direct chat attachment transfer is not yet supported.",
+    "developerName": "PRDB",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://prdb.ai",
+    "supportURL": "https://prdb.ai/support",
+    "brandColor": "#268BD2",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "defaultPrompt": [
+      "Read this paper with PRDB and save an evidence-backed private review draft."
+    ]
+  },
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/prdb-setup/SKILL.md"
+    }
+  }
+}

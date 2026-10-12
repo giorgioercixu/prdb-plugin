@@ -1,0 +1,20 @@
+{
+  "name": "prdb",
+  "interface": {
+    "displayName": "PRDB"
+  },
+  "plugins": [
+    {
+      "name": "prdb",
+      "source": {
+        "source": "local",
+        "path": "./plugins/prdb"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
