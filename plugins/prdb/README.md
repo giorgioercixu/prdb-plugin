@@ -2,7 +2,7 @@
 
 Read papers with your agent. Search PRDB, upload your own private PDFs, save exact highlights and comments, and keep private reviews in the Library you use on the website.
 
-**Plugin 0.1.0 · Codex · https://prdb.ai/mcp.** Distributed through [prdb-plugin](https://github.com/giorgioercixu/prdb-plugin), not an OpenAI-reviewed directory listing. Fresh-machine testing is still in progress. The website's older 0.0.10 download is a separate preview; use this repository's version for the trial.
+**Plugin 0.2.0 · Codex · https://prdb.ai/mcp.** Distributed through [prdb-plugin](https://github.com/giorgioercixu/prdb-plugin), not an OpenAI-reviewed directory listing. Fresh-machine testing is still in progress. Use the matching package for your environment; staging and production accounts are separate.
 
 ## 1. Create your account
 
@@ -12,12 +12,12 @@ Read papers with your agent. Search PRDB, upload your own private PDFs, save exa
 
 Open Codex Desktop and paste this into a chat:
 
-> Install the PRDB public trial from https://github.com/giorgioercixu/prdb-plugin, pinned to v0.1.0. You may add this one marketplace and install prdb@prdb. Check that the Codex CLI supports plugin commands first, preserve my other settings, and do not copy credentials from another computer. Tell me when to start a new chat and authorize PRDB in my browser.
+> Install the PRDB public trial from https://github.com/giorgioercixu/prdb-plugin, pinned to v0.2.0. You may add this one marketplace and install prdb@prdb. Check that the Codex CLI supports plugin commands first, preserve my other settings, and do not copy credentials from another computer. Tell me when to start a new chat and authorize PRDB in my browser.
 
 The supported CLI path, for you or your agent:
 
 ```sh
-codex plugin marketplace add giorgioercixu/prdb-plugin --ref v0.1.0
+codex plugin marketplace add giorgioercixu/prdb-plugin --ref v0.2.0
 codex plugin add prdb@prdb
 ```
 
@@ -43,8 +43,7 @@ Start with one PDF containing selectable text, for a paper in the PRDB catalog:
 
 Open the returned browser link, select your PDF, review the match and approve the upload. This route needs **no Python**. The agent checks the uploaded document, rather than calling a pending preview a completed upload. The ordinary paper-page **Upload** button also works.
 
-For chat-side handoff, the optional packaged helper needs Python 3 and an OS picker. The agent requests an upload; you select a file in the picker and approve the actual file/Paper in your browser. Upload needs no copyright statement or password re-entry. A chat attachment is not automatically available to remote MCP: generic direct attachment transfer is not implemented. Record which path worked: browser import, native picker or website Upload.
-
+For a chat attachment or folder, explicitly give your agent access to the actual file or selected directory and ask it to upload privately. On POSIX systems, the optional Python 3 helper inspects only that granted root, rejects symlinks and path escapes, checks actual PDF bytes and SHA-256, and uploads through a short-lived lease. The agent matches the title/DOI/authors to the PRDB catalog and keeps a private progress journal for retries. It must leave ambiguous or absent catalog matches for you to resolve. A chat attachment works only if your client exposes a readable local file; that client path still needs real-user testing. Browser import and the OS picker remain available; no copyright declaration or password re-entry is required for uploading.
 Each PDF must be at most 30 MiB. Scanned/encrypted PDFs and absent catalog papers may need another workflow; the agent should report the limitation, not guess a paper or passage. Export batches support up to 50 PDFs/300 MiB; first finish the one-paper trial.
 
 ## 5. Highlight, comment and save a private review
@@ -57,7 +56,7 @@ Public review publication is optional: the agent prepares a preview and you pers
 
 ## Update, revoke or remove
 
-- Read the next release notes before changing versions. The pinned v0.1.0 does not follow `main`. To switch to an approved newer tag, repeat `codex plugin marketplace add giorgioercixu/prdb-plugin --ref <new-tag>`, then refresh the marketplace/install according to the client. Start a new chat and check the actual installed version.
+- Read the next release notes before changing versions. The pinned v0.2.0 does not follow `main`. To switch to an approved newer tag, repeat `codex plugin marketplace add giorgioercixu/prdb-plugin --ref <new-tag>`, then refresh the marketplace/install according to the client. Start a new chat and check the actual installed version.
 - Revoke in [My Account → Connections](https://prdb.ai/profile#connections). Local uninstall is not PRDB revocation. Your saved material remains available on the website.
 - Uninstall: `codex plugin remove prdb@prdb`. Remove this marketplace too: `codex plugin marketplace remove prdb`.
 - For an old `prdb-reading-preview`, explicitly disable/remove it and revoke its connection when no longer needed. Then install PRDB and authorize it anew. Old grants are not silently expanded.
@@ -68,4 +67,10 @@ Use [public installation/UX issues](https://github.com/giorgioercixu/prdb-plugin
 
 Try one paper, then two or three more; note the manual steps and time required. Fresh-machine human feedback is separate from parser/SDK/automated checks.
 
-Recent update: 2026-10-13 PRDB 0.1.0 public-trial installation, OAuth, first PDF and feedback guide.
+## Library and daily actions
+
+Choose the optional operation permissions in browser OAuth, then ask your agent to manage bookmarks, reading status, ratings, follows, discussions, notifications or your own profile/claims/support requests. Old connections do not gain new permissions automatically. Administrators decide claims independently; this plugin has no reviewer access. Public writes and deletion follow your explicit request.
+
+Page images and long-page continuation complement text reading. Images do not provide OCR or accurate highlight coordinates by themselves. Public reviews still use PRDB's owner-confirmed browser preview; the experimental native chat confirmation is disabled until actual client verification.
+
+Recent update: 2026-10-13 PRDB 0.2.0 release batch; three skills, optional operation permissions and granted-file transfers. Fresh-machine human acceptance remains pending.

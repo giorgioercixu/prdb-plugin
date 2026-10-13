@@ -1,7 +1,7 @@
 # PRDB setup
 
-`SKILL.md` guides public installation, account registration, OAuth, scopes/Library consent, long-term or finite grants, actual connection checks and revocation. It links the public guide, without requiring private application source.
+`SKILL.md` guides installation, registration, browser OAuth, Library consent, actual owner/scopes and revocation. [scripts](scripts/README.md) provides optional standard-library diagnostics and registration progress receipts; it accepts no password or OAuth token.
 
-Old preview installations/grants are not replaced silently. Client loading, OAuth callbacks and actual uploads are separate acceptance steps.
+Old installations/grants are not silently replaced. Client tool loading, real email/OAuth callbacks and actual uploads remain separate acceptance steps.
 
-Recent update: 2026-10-13 PRDB 0.1.0 onboarding and runtime-free upload guidance.
+Recent update: 2026-10-13 PRDB 0.2.0 setup diagnostics and browser registration handoff.

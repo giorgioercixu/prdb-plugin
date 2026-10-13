@@ -5,12 +5,25 @@
       "scopes": [
         "documents:read",
         "documents:upload",
+        "resources:write",
         "reader:read",
         "annotations:write",
         "notes:read",
         "reviews:draft",
         "notes:write",
-        "reviews:publish"
+        "reviews:publish",
+        "library:read",
+        "library:write",
+        "community:read",
+        "community:write",
+        "notifications:read",
+        "notifications:write",
+        "profile:read",
+        "profile:write",
+        "requests:read",
+        "requests:write",
+        "documents:delete",
+        "notes:delete"
       ]
     }
   }

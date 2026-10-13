@@ -4,7 +4,7 @@
 
 ![PRDB](plugins/prdb/assets/icon.png)
 
-**Public trial 0.1.0 for Codex Desktop.** Connects to [prdb.ai](https://prdb.ai). This repository contains only the plugin and optional file picker; no application server, accounts or private material. It has not been submitted to the OpenAI public directory.
+**Public trial 0.2.0 for Codex Desktop.** Connects to [prdb.ai](https://prdb.ai). This repository contains only the plugin, skills and optional file helpers; no application server, accounts or private material. It has not been submitted to the OpenAI public directory.
 
 ## Start here
 
@@ -15,20 +15,20 @@
 
 Ask Codex:
 
-> Install the PRDB public trial from https://github.com/giorgioercixu/prdb-plugin, pinned to v0.1.0. You may add this marketplace and install prdb@prdb, preserving other settings. Check the Codex CLI first, then tell me when to start a new chat and authorize PRDB in my browser.
+> Install the PRDB public trial from https://github.com/giorgioercixu/prdb-plugin, pinned to v0.2.0. You may add this marketplace and install prdb@prdb, preserving other settings. Check the Codex CLI first, then tell me when to start a new chat and authorize PRDB in my browser.
 
 For an available Codex CLI:
 
 ```sh
-codex plugin marketplace add giorgioercixu/prdb-plugin --ref v0.1.0
+codex plugin marketplace add giorgioercixu/prdb-plugin --ref v0.2.0
 codex plugin add prdb@prdb
 ```
 
 ## Downloads and status
 
-[Release v0.1.0](https://github.com/giorgioercixu/prdb-plugin/releases/tag/v0.1.0) contains the Codex ZIP, SHA256SUMS and file manifest. Repository installation uses the same package at `plugins/prdb`. [Release notes](CHANGELOG.md) distinguish plugin versions from website releases.
+[Release v0.2.0](https://github.com/giorgioercixu/prdb-plugin/releases/tag/v0.2.0) contains the Codex ZIP, SHA256SUMS and file manifest. Repository installation uses the same package at `plugins/prdb`. [Release notes](CHANGELOG.md) distinguish plugin versions from website releases.
 
-Remote reading requires no local MCP server or Python package. A single PDF can be imported in your browser; the optional OS picker requires Python 3. Generic direct chat attachment transfer and other clients have not been accepted. Fresh-machine human testing is the purpose of this trial; automated parsing is not a human reading test.
+Remote reading requires no local MCP server or Python package. A single PDF can be imported in your browser; the optional OS picker requires Python 3. Explicitly granted POSIX files/directories are supported through an optional Python 3 helper; direct chat attachments require client file access and real-user acceptance. Other clients have not been accepted. Fresh-machine human testing is the purpose of this trial; automated parsing is not a human reading test.
 
 ## Repository contents
 
@@ -41,4 +41,4 @@ Remote reading requires no local MCP server or Python package. A single PDF can 
 
 Use [PRDB Support](https://prdb.ai/support) or issues@prdb.ai for private reports. Do not include passwords, tokens, private PDFs or notes in public issues.
 
-Recent update: 2026-10-13 Initial PRDB public trial; official directory review deferred until ordinary-user iterations are stable.
+Recent update: 2026-10-13 PRDB 0.2.0 public trial; official directory review deferred until ordinary-user iterations are stable.

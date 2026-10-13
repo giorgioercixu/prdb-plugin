@@ -1,8 +1,9 @@
 # PRDB skills
 
-- [prdb-setup](prdb-setup/README.md): install/connect guidance, browser OAuth, scopes, Library consent, actual connection checks and revocation.
-- [prdb-reading](prdb-reading/README.md): checked PDFs, exact anchors, comments/private reviews, source checks, optional public previews and selected export batches.
+- [prdb-setup](prdb-setup/README.md): installation diagnostics, registration handoff, browser OAuth, owner/scopes and revocation.
+- [prdb-reading](prdb-reading/README.md): checked PDFs, exact highlights/comments, private notes/reviews, page images and selected export imports.
+- [prdb-actions](prdb-actions/README.md): Library, reading status, ratings, follows, discussions, notifications and the owner's profile/claims/support.
 
-Skills guide workflows without granting permissions. Public publication needs owner confirmation; ordinary reading never grants admin authority. The optional picker and browser import have different runtime requirements. Chat attachments are not automatically uploaded.
+Skills grant no permissions. Old connections require explicit reauthorization for new operations. Public reviews need owner confirmation; ordinary skills never grant admin access. Chat attachments require actual client file access.
 
-Recent update: 2026-10-13 Public-trial 0.1.0 setup and one-PDF browser route.
+Recent update: 2026-10-13 PRDB 0.2.0 release batch with three ordinary-user skills.

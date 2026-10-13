@@ -1,7 +1,7 @@
 {
   "name": "prdb",
-  "version": "0.1.0",
-  "description": "Read your private papers with exact highlights, comments and review drafts in PRDB.",
+  "version": "0.2.0",
+  "description": "Manage your PRDB library and read private papers with your agent.",
   "author": {
     "name": "PRDB",
     "url": "https://prdb.ai"
@@ -13,7 +13,7 @@
   "interface": {
     "displayName": "PRDB",
     "shortDescription": "Read papers with your agent",
-    "longDescription": "Search PRDB, read your private PDFs, save exact highlights and comments, and draft private reviews with checked sources. Connect your ordinary PRDB account through browser OAuth. Upload with PRDB's browser file selection or an optional local picker. Public reviews require your separate confirmation. Public trial: fresh-machine Codex Desktop feedback is welcome; generic direct chat attachment transfer is not yet supported.",
+    "longDescription": "Browser registration handoffs, OAuth identity, private PDF transfer from explicitly granted local files, Library and daily actions, exact highlights/comments, page images and private reviews. Public reviews require exact-body owner confirmation in PRDB; experimental native UI approval remains disabled pending client verification.",
     "developerName": "PRDB",
     "category": "Productivity",
     "capabilities": [
